@@ -43,6 +43,7 @@
     </bpmn:subProcess>
     <bpmn:subProcess id="SubProcess_1c26ye4" name="Determine internal customers">
       <bpmn:incoming>SequenceFlow_1h58ymc</bpmn:incoming>
+      <bpmn:incoming>SequenceFlow_1ld0lup</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_0au99gh</bpmn:outgoing>
       <bpmn:task id="Task_01ts5a1" name="Specification of internal customer characteristics">
         <bpmn:outgoing>SequenceFlow_14yi4h6</bpmn:outgoing>
@@ -61,6 +62,7 @@
     <bpmn:subProcess id="SubProcess_09ol2nx" name="Determine service task devolvement">
       <bpmn:incoming>SequenceFlow_0au99gh</bpmn:incoming>
       <bpmn:outgoing>SequenceFlow_1f74j8v</bpmn:outgoing>
+      <bpmn:outgoing>SequenceFlow_1ld0lup</bpmn:outgoing>
       <bpmn:task id="Task_06mirpf" name="Specification and isolation of fail points">
         <bpmn:outgoing>SequenceFlow_0rp6lvq</bpmn:outgoing>
       </bpmn:task>
@@ -79,6 +81,7 @@
       </bpmn:task>
       <bpmn:sequenceFlow id="SequenceFlow_127ac0w" sourceRef="Task_13tfwl3" targetRef="Task_04jv18l" />
     </bpmn:subProcess>
+    <bpmn:sequenceFlow id="SequenceFlow_1ld0lup" sourceRef="SubProcess_09ol2nx" targetRef="SubProcess_1c26ye4" />
   </bpmn:process>
   <bpmndi:BPMNDiagram id="BPMNDiagram_1">
     <bpmndi:BPMNPlane id="BPMNPlane_1" bpmnElement="Collaboration_079bwgc">
@@ -238,6 +241,15 @@
         <di:waypoint xsi:type="dc:Point" x="713" y="555" />
         <bpmndi:BPMNLabel>
           <dc:Bounds x="1110" y="413" width="0" height="12" />
+        </bpmndi:BPMNLabel>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="SequenceFlow_1ld0lup_di" bpmnElement="SequenceFlow_1ld0lup">
+        <di:waypoint xsi:type="dc:Point" x="1253" y="653" />
+        <di:waypoint xsi:type="dc:Point" x="1253" y="683" />
+        <di:waypoint xsi:type="dc:Point" x="845" y="683" />
+        <di:waypoint xsi:type="dc:Point" x="845" y="653" />
+        <bpmndi:BPMNLabel>
+          <dc:Bounds x="1049" y="662" width="0" height="12" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
     </bpmndi:BPMNPlane>
